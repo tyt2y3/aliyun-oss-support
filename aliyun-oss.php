@@ -3,9 +3,9 @@
  * Plugin Name: Aliyun OSS
  * Description: 使用阿里云 OSS 作为附件的存储空间。 This is a plugin that used Aliyun OSS for attachments remote saving.
  * Author: Ivan Chou
- * Author URI: https://yii.im/
- * Version: 3.2.4
- * Updated_at: 2018-11-07
+ * Author URI: https://github.com/IvanChou/aliyun-oss-support
+ * Version: 3.2.5
+ * Updated_at: 2019-02-14
  */
 
 /*  Copyright 2016  Ivan Chou  (email : yiichou@gmail.com)
