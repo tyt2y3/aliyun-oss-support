@@ -8,9 +8,11 @@ use OSS\OssClient;
 class Upload
 {
     private $oc;
+    private static $instance = null;
 
     public function __construct(OssClient $ossClient)
     {
+        self::$instance = $this;
         $this->oc = $ossClient;
         $this->ossHeader = array(
             OssClient::OSS_HEADERS => array(
@@ -25,6 +27,11 @@ class Upload
         }
 
         add_action('oss_upload_file', array($this, 'uploadFileToOss'), 9, 3);
+    }
+
+    public static function getInstance()
+    {
+        return self::$instance;
     }
 
     /**

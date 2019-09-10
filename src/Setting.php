@@ -28,6 +28,15 @@ class Setting
             'aliyun-oss',
             array($this, 'settingsPage')
         );
+
+        add_submenu_page(
+            null,
+            __('Aliyun OSS', 'aliyun-oss'),
+            '',
+            'manage_options',
+            'aliyun-oss-upload',
+            array($this, 'uploadPage')
+        );
     }
 
     /**
@@ -61,6 +70,11 @@ class Setting
     {
         !empty($_POST) && $this->updateSettings();
         require __DIR__.'/../view/setting.php';
+    }
+
+    public function uploadPage()
+    {
+        require __DIR__.'/../view/upload.php';
     }
 
     public function downloadImgStyleProfile()
